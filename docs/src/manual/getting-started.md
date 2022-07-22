@@ -1,3 +1,5 @@
+# Getting started
+
 # Getting Xtal.jl
 
 As of this release, Xtal.jl is not in the Julia package registry. You'll need to manually add this

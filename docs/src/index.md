@@ -1,3 +1,7 @@
+# Xtal.jl
+
+A Julia package that provides structs and methods for working with crystal structures.
+
 # Introduction
 
 Xtal.jl is a package designed to make the development of chemical theory tools easier. Not only 

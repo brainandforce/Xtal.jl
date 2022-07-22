@@ -4,7 +4,16 @@ using Xtal
 makedocs(
     sitename = "Xtal",
     format = Documenter.HTML(),
-    modules = [Xtal]
+    modules = [Xtal],
+    pages = [
+        "Home" => "index.md",
+        "Getting started" => Any[
+            "manual/getting-started.md"
+        ],
+        "API" => Any[
+            "Lattices" => "api/lattices.md"
+        ]
+    ]
 )
 
 # Documenter can also automatically deploy documentation to gh-pages.
