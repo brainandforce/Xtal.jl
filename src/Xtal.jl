@@ -121,10 +121,6 @@ export RealSpaceDataGrid, KPointGrid, KPointList, BandAtKPoint, BandStructure, H
        SphericalComponents
 export grid, gridsize, volume, voxelsize, integrate, fft, nkpt, nband, bounds, fermi, smear,
        energies, nelectrons
-#=
-include("potentials.jl")
-export XCFunctional, HGHPseudopotential, zatom, zion
-=#
 # Methods and structs for working with different file formats
 include("filetypes.jl")
 export readXYZ, writeXYZ, readXSF3D, writeXSF, readCPcoeff, readCPgeo, readCPcell
