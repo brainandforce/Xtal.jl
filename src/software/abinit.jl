@@ -831,6 +831,7 @@ Depending on the value of `cplex`, the datagrid(s) returned may be real or compl
 """
 read_abinit_wavefunction(filename::AbstractString) = open(read_abinit_wavefunction, filename)
 
+#=
 """
     readHGH(io::IO)
 
@@ -894,3 +895,4 @@ function readHGH(io::IO)
 end
 
 readHGH(filename::AbstractString) = open(readHGH, filename)
+=#
