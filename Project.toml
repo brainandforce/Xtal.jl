@@ -5,7 +5,7 @@ authors = [
     "Amber Lim <xalim@wisc.edu>", 
     "Patrick Cross <pcross@wisc.edu>"
 ]
-version = "0.1.13-dev"
+version = "0.2.0-dev"
 
 [deps]
 ComputedFieldTypes = "459fdd68-db75-56b8-8c15-d717a790f88e"
