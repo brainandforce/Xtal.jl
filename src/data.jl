@@ -53,6 +53,16 @@ function RealSpaceDataGrid(
     end
 end
 
+"""
+    RealSpaceDataGrid(f, g::RealSpaceDataGrid)
+
+Applies a function `f` elementwise to the grid elements of a `RealSpaceDataGrid` and returns a new
+`RealSpaceDataGrid`.
+"""
+function RealSpaceDataGrid(f, g::RealSpaceDataGrid)
+    return RealSpaceDataGrid(basis(g), shift(g), f.(grid(g)))
+end
+
 # getindex supports arbitrary integer indices for RealSpaceDataGrid
 function Base.getindex(g::RealSpaceDataGrid, inds...)
     # Perform modulo math to get the indices
@@ -158,6 +168,15 @@ Performs an integration across all voxels, returning a scalar value.
 """
 function integrate(g::RealSpaceDataGrid{D,T}) where {D,T<:Number}
     return sum(grid(g)) * voxelsize(g)
+end
+
+"""
+    integrate(f, g::RealSpaceDataGrid{D,T<:Number}) -> <:Number
+
+Applies the function `f` pointwise to the elements of a datagrid, then integrates the grid.
+"""
+function integrate(f, g::RealSpaceDataGrid{D,T}) where {D,T<:Number}
+    return sum(f.(grid(g))) * voxelsize(g)
 end
 
 """
